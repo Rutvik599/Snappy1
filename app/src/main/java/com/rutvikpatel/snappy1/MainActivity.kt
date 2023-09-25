@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val userData = UserData("hello", "hii")
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         runBlocking {
             sendUserData(userData)
         }
